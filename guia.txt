@@ -44,3 +44,14 @@
 -creamos superuser para acceder al sitio
 
 //////////////3a parte////////////
+
+-Añadimso mas funciones de vistas a views.py
+-Por lo tanto, hay que mapearlas en polls/urls.py
+
+-Crear templates/polls/index
+-modificar la def index para que no tenga vistas y tire del templates
+- se vuelve a modificar usando el atajo render()
+
+-se vuelven a modificar con  get_object_or_404()
+
+-modificar hardcode de index html haciendo referencia al name  que le dimos a las urlpatterns en polls/url
