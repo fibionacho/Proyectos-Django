@@ -1,0 +1,46 @@
+///////////1A PARTE///////////
+
+- Iniciamos proyecto:
+    django-admin startproject mysite
+
+- Iniciamos app desde /mysite
+    python manage.py startapp polls
+
+
+-Generamos nuestra primera vista en /polls/views
+        def index(request):
+            return HttpResponse("Hello, world. You're at the polls index.") 
+
+
+-Creamos urls.py en /polls para mapear nuestra vista
+                urlpatterns = [
+                     path('', views.index, name='index'),
+                ]
+
+
+-Desde la url general, metemos en el urlpatterns el include a nuestra polls/url
+        urlpatterns = [
+            path('polls/', include('polls.urls')),
+            path('admin/', admin.site.urls),
+        ]
+
+
+///////////2a parte////////////
+ configurando base de datos y cargando modelos
+
+ -settings. cambio de hora en TIME_ZONE y DATABASES
+ - crear la bbdd y GRANT ALL PRIVILEGES ON encuesta1.* to 'user_testeo'@'localhost' WITH GRANT OPTION;
+
+
+-crear los modelos
+
+-añadir la aplicacions a INSTALLED_APPS de settings (está en polls/apps)
+
+-Makemigration y migrate
+
+-Se le añaden dos cosas nuevas a los modelos (toString)
+-Se importal los modelos a admin.py
+
+-creamos superuser para acceder al sitio
+
+//////////////3a parte////////////
