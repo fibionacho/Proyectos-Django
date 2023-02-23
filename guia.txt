@@ -55,3 +55,15 @@
 -se vuelven a modificar con  get_object_or_404()
 
 -modificar hardcode de index html haciendo referencia al name  que le dimos a las urlpatterns en polls/url
+
+
+///////////4º parte//////////////////////
+
+-preparar templates de votacion
+
+-SE CAMBIAN URLS Y VISTAS A CLASES. INTENTAR EMPEZAR DESDE AQUI 
+
+
+////////6a parte//////////////////
+facilísimo, es añadir estilos
+
