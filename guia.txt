@@ -1,9 +1,4 @@
-///////////1A PARTE///////////
-
-- Iniciamos proyecto:
-    django-admin startproject mysite
-
-- Iniciamos app desde /mysite
+´
     python manage.py startapp polls
 
 

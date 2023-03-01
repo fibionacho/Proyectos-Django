@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="{% url 'encuesta:resultado' pregunta.id %}" method="post">
+        {% csrf_token %}
+        <fieldset>
+            <legend><h1>{{ pregunta.texto_pregunta }}</h1></legend>
+            {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+            {% for choice in pregunta.choice_set.all %}
+                <input type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{ respuesta.id }}">
+                <label for="respuesta{{ forloop.counter }}">{{ pregunta.texto_respuesta }}</label><br>
+            {% endfor %}
+        </fieldset>
+        <input type="submit" value="Vote">
+        </form>
+</body>
+</html>
